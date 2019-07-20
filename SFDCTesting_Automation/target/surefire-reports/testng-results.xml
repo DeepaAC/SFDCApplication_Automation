@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="14" total="19" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="sfdcsuite" duration-ms="69392" started-at="2019-07-20T00:32:41Z" finished-at="2019-07-20T00:33:50Z">
+    <groups>
+    </groups>
+    <test name="testngTest" duration-ms="69392" started-at="2019-07-20T00:32:41Z" finished-at="2019-07-20T00:33:50Z">
+      <class name="com.SFDC.Automation.AutomationScript_Test">
+        <test-method status="PASS" signature="Login()[pri:1, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="Login" duration-ms="17712" started-at="2019-07-20T00:32:41Z" finished-at="2019-07-20T00:32:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="oppurtunity_TC15()[pri:14, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="oppurtunity_TC15" duration-ms="9440" started-at="2019-07-20T00:32:58Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.Login" finished-at="2019-07-20T00:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oppurtunity_TC15 -->
+        <test-method status="PASS" signature="Create_new_Opty_TC16()[pri:15, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="Create_new_Opty_TC16" duration-ms="33413" started-at="2019-07-20T00:33:08Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.oppurtunity_TC15" finished-at="2019-07-20T00:33:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_new_Opty_TC16 -->
+        <test-method status="PASS" signature="oppurtunity_Pipeline_report_TC17()[pri:16, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="oppurtunity_Pipeline_report_TC17" duration-ms="4420" started-at="2019-07-20T00:33:41Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.oppurtunity_TC15" finished-at="2019-07-20T00:33:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oppurtunity_Pipeline_report_TC17 -->
+        <test-method status="PASS" signature="oppurtunity_Stuck_report_TC18()[pri:17, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="oppurtunity_Stuck_report_TC18" duration-ms="4129" started-at="2019-07-20T00:33:46Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.oppurtunity_TC15" finished-at="2019-07-20T00:33:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oppurtunity_Stuck_report_TC18 -->
+        <test-method status="PASS" signature="logger()[pri:0, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="logger" is-config="true" duration-ms="253" started-at="2019-07-20T00:33:50Z" finished-at="2019-07-20T00:33:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logger -->
+      </class> <!-- com.SFDC.Automation.AutomationScript_Test -->
+    </test> <!-- testngTest -->
+  </suite> <!-- sfdcsuite -->
+</testng-results>

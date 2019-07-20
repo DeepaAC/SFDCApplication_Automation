@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="7" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="109810" started-at="2019-07-18T19:51:12Z" finished-at="2019-07-18T19:53:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="109810" started-at="2019-07-18T19:51:12Z" finished-at="2019-07-18T19:53:01Z">
+      <class name="com.Salesforce.Automation.AutomationScript_Test">
+        <test-method status="PASS" signature="LoginError_TC1()[pri:3, instance:com.Salesforce.Automation.AutomationScript_Test@4d95d2a2]" name="LoginError_TC1" duration-ms="22426" started-at="2019-07-18T19:51:12Z" finished-at="2019-07-18T19:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginError_TC1 -->
+        <test-method status="PASS" signature="Login_TC2()[pri:4, instance:com.Salesforce.Automation.AutomationScript_Test@4d95d2a2]" name="Login_TC2" duration-ms="17625" started-at="2019-07-18T19:51:34Z" finished-at="2019-07-18T19:51:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_TC2 -->
+        <test-method status="PASS" signature="forgotPassword_TC4A()[pri:5, instance:com.Salesforce.Automation.AutomationScript_Test@4d95d2a2]" name="forgotPassword_TC4A" duration-ms="17767" started-at="2019-07-18T19:51:52Z" finished-at="2019-07-18T19:52:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPassword_TC4A -->
+        <test-method status="PASS" signature="ValidateLogin_TC4B()[pri:6, instance:com.Salesforce.Automation.AutomationScript_Test@4d95d2a2]" name="ValidateLogin_TC4B" duration-ms="17387" started-at="2019-07-18T19:52:09Z" finished-at="2019-07-18T19:52:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateLogin_TC4B -->
+        <test-method status="PASS" signature="checkRememberMe_TC3()[pri:7, instance:com.Salesforce.Automation.AutomationScript_Test@4d95d2a2]" name="checkRememberMe_TC3" duration-ms="34543" started-at="2019-07-18T19:52:27Z" finished-at="2019-07-18T19:53:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkRememberMe_TC3 -->
+      </class> <!-- com.Salesforce.Automation.AutomationScript_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

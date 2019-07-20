@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="22" total="25" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="28553" started-at="2019-07-20T19:25:02Z" finished-at="2019-07-20T19:25:31Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="28553" started-at="2019-07-20T19:25:02Z" finished-at="2019-07-20T19:25:31Z">
+      <class name="com.SFDC.Automation.AutomationScript_Test">
+        <test-method status="PASS" signature="Login()[pri:1, instance:com.SFDC.Automation.AutomationScript_Test@1b68ddbd]" name="Login" duration-ms="14872" started-at="2019-07-20T19:25:02Z" finished-at="2019-07-20T19:25:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="LeadTab_TC20()[pri:19, instance:com.SFDC.Automation.AutomationScript_Test@1b68ddbd]" name="LeadTab_TC20" duration-ms="5588" started-at="2019-07-20T19:25:17Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.Login" finished-at="2019-07-20T19:25:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LeadTab_TC20 -->
+        <test-method status="PASS" signature="NewButton_TC24()[pri:23, instance:com.SFDC.Automation.AutomationScript_Test@1b68ddbd]" name="NewButton_TC24" duration-ms="3712" started-at="2019-07-20T19:25:23Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.LeadTab_TC20" finished-at="2019-07-20T19:25:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NewButton_TC24 -->
+        <test-method status="PASS" signature="closeWindow()[pri:0, instance:com.SFDC.Automation.AutomationScript_Test@1b68ddbd]" name="closeWindow" is-config="true" duration-ms="4089" started-at="2019-07-20T19:25:26Z" finished-at="2019-07-20T19:25:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeWindow -->
+        <test-method status="PASS" signature="logger()[pri:0, instance:com.SFDC.Automation.AutomationScript_Test@1b68ddbd]" name="logger" is-config="true" duration-ms="237" started-at="2019-07-20T19:25:30Z" finished-at="2019-07-20T19:25:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logger -->
+      </class> <!-- com.SFDC.Automation.AutomationScript_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
