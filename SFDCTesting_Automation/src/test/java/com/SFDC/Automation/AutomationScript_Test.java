@@ -607,81 +607,125 @@ public class AutomationScript_Test extends ReusableMethods {
 		ClickButton(RunReportButton,"RunReportButton");
 
 	}
-	
-	@Test(priority=19,dependsOnMethods={"Login"})
+
+	@Test(priority=19,dependsOnMethods={"Login"},enabled=false)
 	public static void LeadTab_TC20() throws InterruptedException {
 		CreateReport("LeadTab_TC20");
 		WebElement LeadTabLink = driver.findElement(By.xpath("//a[contains(text(),'Leads')]"));
 		ClickButton(LeadTabLink,"LeadTabLink");
-		
+
 	}
-	
+
 	@Test(priority=20,dependsOnMethods={"LeadTab_TC20"},enabled=false)
 	public static void ViewDropDown_TC21() throws InterruptedException {
 		CreateReport("ViewDropDown_TC21");
 		WebElement ViewDropDown = driver.findElement(By.xpath("//select[@id='fcf']"));
 		ClickButton(ViewDropDown,"ViewDropDown");
 		selectAllDropdownValues(ViewDropDown,"ViewDropDown");
-			
+
 	}
-	
+
 	@Test(priority=21,dependsOnMethods={"LeadTab_TC20"},enabled=false)
 	public static void Functionality_Go_Button_TC22() throws InterruptedException {
 		CreateReport("Functionality_Go_Button_TC22");
-		
+
 		WebElement ViewDropDown = driver.findElement(By.xpath("//select[@id='fcf']"));
 		ClickButton(ViewDropDown,"ViewDropDown");
 		selectElementByVisibleText(ViewDropDown,"Today's Leads","ViewDropDown");
-		
+
 		WebElement UserMenu = driver.findElement(By.id("userNavButton"));
 		ClickButton(UserMenu,"UserMenu");
 		Thread.sleep(3000);
-		
+
 		WebElement LogOutButton = driver.findElement(By.xpath("//a[contains(text(),'Logout')]"));
 		ClickButton(LogOutButton,"LogOutButton");
-		
+
 		Login();
 		LeadTab_TC20();
-		
+
 		WebElement GoButton = driver.findElement(By.xpath("//span[@class='fBody']//input[@name='go']"));
 		ClickButton(GoButton,"GoButton");
 		Thread.sleep(4000);
-	
+
 	}
-	
+
 	@Test(priority=22,dependsOnMethods={"LeadTab_TC20"},enabled=false)
 	public static void TodaysLead_TC23() throws InterruptedException {
 		CreateReport("TodaysLead_TC23");
-		
+
 		WebElement ViewDropDown = driver.findElement(By.xpath("//select[@id='fcf']"));
 		ClickButton(ViewDropDown,"ViewDropDown");
 		selectElementByVisibleText(ViewDropDown,"Today's Leads","ViewDropDown");
-		
+
 		WebElement GoButton = driver.findElement(By.xpath("//span[@class='fBody']//input[@name='go']"));
 		ClickButton(GoButton,"GoButton");
 		Thread.sleep(4000);
 	}
-	
-	
-	@Test(priority=23,dependsOnMethods={"LeadTab_TC20"})
+
+
+	@Test(priority=23,dependsOnMethods={"LeadTab_TC20"},enabled=false)
 	public static void NewButton_TC24() throws InterruptedException {
 		CreateReport("NewButton_TC24");
-		
+
 		WebElement NewButton = driver.findElement(By.xpath("//input[@name='new']"));
 		ClickButton(NewButton,"NewButton");
-		
+
 		WebElement LastName = driver.findElement(By.xpath("//input[@id='name_lastlea2']"));
 		entertext(LastName,"ABCD","LastName"); 
-		
-		
+
+		Thread.sleep(3000);
 		WebElement CompanyName = driver.findElement(By.xpath("//input[@id='lea3']"));
 		entertext(CompanyName,"ABCD","CompanyName");
-		
-		
+
+
 		WebElement SaveButton = driver.findElement(By.xpath("//td[@id='topButtonRow']//input[@name='save']"));
 		ClickButton(SaveButton,"SaveButton");
 		Thread.sleep(2000);
 	}
-	
-	
+
+	@Test(priority=24,dependsOnMethods={"Login"})
+	public static void Contact_TC25() throws InterruptedException {
+		CreateReport("Contact_TC25");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement NewButton = driver.findElement(By.xpath("//input[@name='new']"));
+		ClickButton(NewButton,"NewButton");
+
+		WebElement LastName = driver.findElement(By.xpath("//input[@id='name_lastcon2']"));
+		entertext(LastName,"ABCD","LastName");
+		Thread.sleep(3000);
+
+		WebElement AccountName = driver.findElement(By.xpath("//input[@id='con4']"));
+		entertext(AccountName,"abc","AccountName");
+		Thread.sleep(3000);
+		WebElement SaveButton = driver.findElement(By.xpath("//td[@id='topButtonRow']//input[@name='save']"));
+		ClickButton(SaveButton,"SaveButton");
+
+	}
+
+
+	@Test(priority=24,dependsOnMethods={"Login"})
+	public static void Contact_View_TC26() throws InterruptedException {
+		CreateReport("Contact_TC25");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"CreateNewViewLink");
+
+		WebElement CreateNewViewLink = driver.findElement(By.xpath("//a[contains(text(),'Create New View')]"));
+		ClickButton(CreateNewViewLink,"ContactTab");
+
+		WebElement ViewNameField = driver.findElement(By.xpath("//input[@id='fname']"));
+		entertext(ViewNameField,"ABCD","ViewNameField");
+		
+		WebElement ViewUniqueNameField = driver.findElement(By.xpath("//input[@id='devname']"));
+		
+		clearField(ViewUniqueNameField);
+		Thread.sleep(5000);
+		entertext(ViewUniqueNameField,"ABCD","ViewUniqueNameField");
+		Thread.sleep(3000);
+		WebElement SaveButton = driver.findElement(By.xpath("//div[@class='pbHeader']//input[@name='save']"));
+		ClickButton(SaveButton,"SaveButton");
+
+	}
+
 }

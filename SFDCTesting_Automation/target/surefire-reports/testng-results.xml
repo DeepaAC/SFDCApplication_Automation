@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="14" total="19" passed="5">
+<testng-results skipped="0" failed="0" ignored="24" total="27" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="sfdcsuite" duration-ms="69392" started-at="2019-07-20T00:32:41Z" finished-at="2019-07-20T00:33:50Z">
+  <suite name="sfdcsuite" duration-ms="46884" started-at="2019-07-20T23:34:53Z" finished-at="2019-07-20T23:35:40Z">
     <groups>
     </groups>
-    <test name="testngTest" duration-ms="69392" started-at="2019-07-20T00:32:41Z" finished-at="2019-07-20T00:33:50Z">
+    <test name="testngTest" duration-ms="46884" started-at="2019-07-20T23:34:53Z" finished-at="2019-07-20T23:35:40Z">
       <class name="com.SFDC.Automation.AutomationScript_Test">
-        <test-method status="PASS" signature="Login()[pri:1, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="Login" duration-ms="17712" started-at="2019-07-20T00:32:41Z" finished-at="2019-07-20T00:32:58Z">
+        <test-method status="PASS" signature="Login()[pri:1, instance:com.SFDC.Automation.AutomationScript_Test@e45f292]" name="Login" duration-ms="19666" started-at="2019-07-20T23:34:53Z" finished-at="2019-07-20T23:35:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="oppurtunity_TC15()[pri:14, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="oppurtunity_TC15" duration-ms="9440" started-at="2019-07-20T00:32:58Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.Login" finished-at="2019-07-20T00:33:08Z">
+        <test-method status="PASS" signature="Contact_TC25()[pri:24, instance:com.SFDC.Automation.AutomationScript_Test@e45f292]" name="Contact_TC25" duration-ms="17118" started-at="2019-07-20T23:35:13Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.Login" finished-at="2019-07-20T23:35:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- oppurtunity_TC15 -->
-        <test-method status="PASS" signature="Create_new_Opty_TC16()[pri:15, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="Create_new_Opty_TC16" duration-ms="33413" started-at="2019-07-20T00:33:08Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.oppurtunity_TC15" finished-at="2019-07-20T00:33:41Z">
+        </test-method> <!-- Contact_TC25 -->
+        <test-method status="PASS" signature="Contact_View_TC26()[pri:24, instance:com.SFDC.Automation.AutomationScript_Test@e45f292]" name="Contact_View_TC26" duration-ms="9574" started-at="2019-07-20T23:35:30Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.Login" finished-at="2019-07-20T23:35:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Create_new_Opty_TC16 -->
-        <test-method status="PASS" signature="oppurtunity_Pipeline_report_TC17()[pri:16, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="oppurtunity_Pipeline_report_TC17" duration-ms="4420" started-at="2019-07-20T00:33:41Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.oppurtunity_TC15" finished-at="2019-07-20T00:33:46Z">
+        </test-method> <!-- Contact_View_TC26 -->
+        <test-method status="PASS" signature="closeWindow()[pri:0, instance:com.SFDC.Automation.AutomationScript_Test@e45f292]" name="closeWindow" is-config="true" duration-ms="87" started-at="2019-07-20T23:35:40Z" finished-at="2019-07-20T23:35:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- oppurtunity_Pipeline_report_TC17 -->
-        <test-method status="PASS" signature="oppurtunity_Stuck_report_TC18()[pri:17, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="oppurtunity_Stuck_report_TC18" duration-ms="4129" started-at="2019-07-20T00:33:46Z" depends-on-methods="com.SFDC.Automation.AutomationScript_Test.oppurtunity_TC15" finished-at="2019-07-20T00:33:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- oppurtunity_Stuck_report_TC18 -->
-        <test-method status="PASS" signature="logger()[pri:0, instance:com.SFDC.Automation.AutomationScript_Test@5bcab519]" name="logger" is-config="true" duration-ms="253" started-at="2019-07-20T00:33:50Z" finished-at="2019-07-20T00:33:50Z">
+        </test-method> <!-- closeWindow -->
+        <test-method status="PASS" signature="logger()[pri:0, instance:com.SFDC.Automation.AutomationScript_Test@e45f292]" name="logger" is-config="true" duration-ms="417" started-at="2019-07-20T23:35:40Z" finished-at="2019-07-20T23:35:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logger -->
