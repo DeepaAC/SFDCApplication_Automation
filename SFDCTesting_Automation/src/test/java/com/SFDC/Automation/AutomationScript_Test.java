@@ -943,7 +943,7 @@ public class AutomationScript_Test extends ReusableMethods {
 	}
 	
 	
-	@Test(priority=36,dependsOnMethods={"Login"})
+	@Test(priority=36,dependsOnMethods={"Login"},enabled=false)
 	public static void CalendarRecurrance_TC37() throws InterruptedException, IOException {
 		CreateReport("CalendarRecurrance_TC37");
 		WebElement HomeButton = driver.findElement(By.xpath("//a[contains(text(),'Home')]"));
@@ -985,4 +985,5 @@ public class AutomationScript_Test extends ReusableMethods {
 	}
 
 
+	
 }
