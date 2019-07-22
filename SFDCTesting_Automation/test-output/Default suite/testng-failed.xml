@@ -5,9 +5,10 @@
     <classes>
       <class name="com.SFDC.Automation.AutomationScript_Test">
         <methods>
-          <include name="UserMenu_MySetting_CalendarReminder_07"/>
-          <include name="UserMenu_TC05"/>
-          <include name="UserMenu_MySetting_Email_07"/>
+          <include name="closeWindow"/>
+          <include name="logger"/>
+          <include name="Login"/>
+          <include name="CalendarRecurrance_TC37"/>
         </methods>
       </class> <!-- com.SFDC.Automation.AutomationScript_Test -->
     </classes>

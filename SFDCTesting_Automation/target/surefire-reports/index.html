@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-sfdcsuite">
-              <span class="suite-name border-passed">sfdcsuite</span>
+              <span class="suite-name border-failed">sfdcsuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-sfdcsuite" class="hide-methods failed suite-sfdcsuite"> (hide)</a> <!-- hide-methods failed suite-sfdcsuite -->
+                      <a href="#" panel-name="suite-sfdcsuite" class="show-methods failed suite-sfdcsuite"> (show)</a> <!-- show-methods failed suite-sfdcsuite -->
+                    </span>
+                    <div class="method-list-content failed suite-sfdcsuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-sfdcsuite" title="com.SFDC.Automation.AutomationScript_Test" hash-for-method="CalendarRecurrance_TC37">CalendarRecurrance_TC37</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-sfdcsuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,27 +116,7 @@
                     <div class="method-list-content passed suite-sfdcsuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-sfdcsuite" title="com.SFDC.Automation.AutomationScript_Test" hash-for-method="Create_new_Opty_TC16">Create_new_Opty_TC16</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-sfdcsuite" title="com.SFDC.Automation.AutomationScript_Test" hash-for-method="Login">Login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-sfdcsuite" title="com.SFDC.Automation.AutomationScript_Test" hash-for-method="oppurtunity_Pipeline_report_TC17">oppurtunity_Pipeline_report_TC17</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-sfdcsuite" title="com.SFDC.Automation.AutomationScript_Test" hash-for-method="oppurtunity_Stuck_report_TC18">oppurtunity_Stuck_report_TC18</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-sfdcsuite" title="com.SFDC.Automation.AutomationScript_Test" hash-for-method="oppurtunity_TC15">oppurtunity_TC15</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-sfdcsuite -->
@@ -137,6 +131,43 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-sfdcsuite" class="panel sfdcsuite">
+          <div class="suite-sfdcsuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.SFDC.Automation.AutomationScript_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CalendarRecurrance_TC37">
+                  </a> <!-- CalendarRecurrance_TC37 -->
+                  <span class="method-name">CalendarRecurrance_TC37</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Sunday July 21, 2019&apos;)]&quot;}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-6T9NE33L&apos;, ip: &apos;192.168.0.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\shank\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55077}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4d78f00667a46f997dde4a70688c11e4
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Sunday July 21, 2019&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.SFDC.Automation.AutomationScript_Test.CalendarRecurrance_TC37(AutomationScript_Test.java:952)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-sfdcsuite-class-failed -->
           <div class="suite-sfdcsuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -145,37 +176,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Create_new_Opty_TC16">
-                  </a> <!-- Create_new_Opty_TC16 -->
-                  <span class="method-name">Create_new_Opty_TC16</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="Login">
                   </a> <!-- Login -->
                   <span class="method-name">Login</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="oppurtunity_Pipeline_report_TC17">
-                  </a> <!-- oppurtunity_Pipeline_report_TC17 -->
-                  <span class="method-name">oppurtunity_Pipeline_report_TC17</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="oppurtunity_Stuck_report_TC18">
-                  </a> <!-- oppurtunity_Stuck_report_TC18 -->
-                  <span class="method-name">oppurtunity_Stuck_report_TC18</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="oppurtunity_TC15">
-                  </a> <!-- oppurtunity_TC15 -->
-                  <span class="method-name">oppurtunity_TC15</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,32 +235,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Create_new_Opty_TC16')
+data.setCell(0, 1, 'CalendarRecurrance_TC37')
 data.setCell(0, 2, 'com.SFDC.Automation.AutomationScript_Test')
-data.setCell(0, 3, 33413);
+data.setCell(0, 3, 19055);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Login')
 data.setCell(1, 2, 'com.SFDC.Automation.AutomationScript_Test')
-data.setCell(1, 3, 17712);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'oppurtunity_TC15')
-data.setCell(2, 2, 'com.SFDC.Automation.AutomationScript_Test')
-data.setCell(2, 3, 9440);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'oppurtunity_Pipeline_report_TC17')
-data.setCell(3, 2, 'com.SFDC.Automation.AutomationScript_Test')
-data.setCell(3, 3, 4420);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'oppurtunity_Stuck_report_TC18')
-data.setCell(4, 2, 'com.SFDC.Automation.AutomationScript_Test')
-data.setCell(4, 3, 4129);
+data.setCell(1, 3, 15139);
 window.suiteTableData['sfdcsuite']= { tableData: data, tableDiv: 'times-div-sfdcsuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-sfdcsuite">
               </div> <!-- times-div-sfdcsuite -->
             </div> <!-- times-div -->
@@ -272,39 +263,83 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-sfdcsuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">14 ignored methods</span>
+            <span class="header-content">36 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.SFDC.Automation.AutomationScript_Test</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">MyProfile_TC06</span>
+                <span class="ignored-method-name">Calendar_TC36</span>
                 <br/>
-                <span class="ignored-method-name">UserMenu_LogOut_09</span>
+                <span class="ignored-method-name">Contact_View_TC31</span>
+                <br/>
+                <span class="ignored-method-name">ViewErrorMsg_TC30</span>
+                <br/>
+                <span class="ignored-method-name">Test_Quarterly_Summary_Report_TC19</span>
                 <br/>
                 <span class="ignored-method-name">Accounts_Merge_TC13</span>
                 <br/>
+                <span class="ignored-method-name">UserMenu_LogOut_09</span>
+                <br/>
+                <span class="ignored-method-name">TodaysLead_TC23</span>
+                <br/>
+                <span class="ignored-method-name">Create_new_Opty_TC16</span>
+                <br/>
                 <span class="ignored-method-name">UserMenu_MySetting_Email_07</span>
+                <br/>
+                <span class="ignored-method-name">ContactNew_SaveButton_TC32</span>
                 <br/>
                 <span class="ignored-method-name">UserMenu_MySetting_Display_07</span>
                 <br/>
-                <span class="ignored-method-name">UserMenu_DeveloperConsole_08</span>
-                <br/>
-                <span class="ignored-method-name">initialize_Driver</span>
+                <span class="ignored-method-name">MyContacts_TC28</span>
                 <br/>
                 <span class="ignored-method-name">UserMenu_MySetting_CalendarReminder_07</span>
                 <br/>
-                <span class="ignored-method-name">UserMenu_TC05</span>
+                <span class="ignored-method-name">oppurtunity_Stuck_report_TC18</span>
                 <br/>
-                <span class="ignored-method-name">UserMenu_MySetting_Personal_TC07</span>
+                <span class="ignored-method-name">ViewDropDown_TC21</span>
                 <br/>
-                <span class="ignored-method-name">launchUrl</span>
-                <br/>
-                <span class="ignored-method-name">Accounts_Edit_View_TC12</span>
+                <span class="ignored-method-name">ValidateLastName_TC34</span>
                 <br/>
                 <span class="ignored-method-name">Accounts_Create_New_TC10</span>
                 <br/>
                 <span class="ignored-method-name">Accounts_Create_New_View_TC11</span>
+                <br/>
+                <span class="ignored-method-name">FirstLastName_TC33</span>
+                <br/>
+                <span class="ignored-method-name">oppurtunity_TC15</span>
+                <br/>
+                <span class="ignored-method-name">MyProfile_TC06</span>
+                <br/>
+                <span class="ignored-method-name">NewButton_TC24</span>
+                <br/>
+                <span class="ignored-method-name">RecentCretaed_TC27</span>
+                <br/>
+                <span class="ignored-method-name">UserMenu_DeveloperConsole_08</span>
+                <br/>
+                <span class="ignored-method-name">LeadTab_TC20</span>
+                <br/>
+                <span class="ignored-method-name">initialize_Driver</span>
+                <br/>
+                <span class="ignored-method-name">UserMenu_TC05</span>
+                <br/>
+                <span class="ignored-method-name">Contact_TC25</span>
+                <br/>
+                <span class="ignored-method-name">UserMenu_MySetting_Personal_TC07</span>
+                <br/>
+                <span class="ignored-method-name">Functionality_Go_Button_TC22</span>
+                <br/>
+                <span class="ignored-method-name">launchUrl</span>
+                <br/>
+                <span class="ignored-method-name">ContactName_TC29</span>
+                <br/>
+                <span class="ignored-method-name">Contact_View_TC26</span>
+                <br/>
+                <span class="ignored-method-name">Accounts_Edit_View_TC12</span>
+                <br/>
+                <span class="ignored-method-name">AllTab_TC35</span>
+                <br/>
+                <span class="ignored-method-name">oppurtunity_Pipeline_report_TC17</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -322,24 +357,18 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">oppurtunity_TC15</span>
-                <span class="method-start">17717 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CalendarRecurrance_TC37</span>
+                <span class="method-start">15144 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">Create_new_Opty_TC16</span>
-                <span class="method-start">27160 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">oppurtunity_Pipeline_report_TC17</span>
-                <span class="method-start">60575 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">oppurtunity_Stuck_report_TC18</span>
-                <span class="method-start">64995 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeWindow</span>
+                <span class="method-start">34217 ms</span>
+              </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">logger</span>
-                <span class="method-start">69124 ms</span>
+                <span class="method-start">38538 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -134,14 +134,17 @@ public class ReusableMethods {
 		String actuallMessage;
 		if(Obj.isEnabled()) {
 			actuallMessage = Obj.getText();
-			if(actuallMessage.equals("ExpectedMessage")) {
-				System.out.println("Pass: matches the actual message");
+			System.out.println("Actual Message is "+ actuallMessage);
+			if(actuallMessage.equals(ExpectedMessage)) {
+				System.out.println("Pass: "+ ObjName +" ExpectedMessage matches the actual message");
+				logger.log(LogStatus.PASS, ObjName +" ExpectedMessage matches the actual message");
 			}else {
-				System.out.println("Fail: does not matches the actual message");
+				System.out.println("Fail: "+ ObjName + " does not matches the actual message");
+				logger.log(LogStatus.FAIL,ObjName +"ExpectedMessage does not matches the actual message");
 			}
-			System.out.println("Pass: " + ObjName + "is clicked" );
+			//System.out.println("Pass: " + ObjName + "is clicked" );
 		}else {
-			System.out.println("Fail "+ ObjName + " is not clicked , please check the appliocation");
+			//System.out.println("Fail "+ ObjName + " is not clicked , please check the appliocation");
 		}
 
 	}

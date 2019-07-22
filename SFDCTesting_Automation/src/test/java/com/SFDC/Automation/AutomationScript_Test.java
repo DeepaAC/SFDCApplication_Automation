@@ -303,6 +303,7 @@ public class AutomationScript_Test extends ReusableMethods {
 	@Test(priority=9,dependsOnMethods={"UserMenu_TC05"},enabled=false)
 	public static void UserMenu_LogOut_09() throws InterruptedException{
 		CreateReport("UserMenu_LogOut_09");
+		UserMenu_TC05();
 		Thread.sleep(3000);
 
 		WebElement LogOut = driver.findElement(By.xpath("//a[contains(text(),'Logout')]"));
@@ -607,81 +608,382 @@ public class AutomationScript_Test extends ReusableMethods {
 		ClickButton(RunReportButton,"RunReportButton");
 
 	}
-	
-	@Test(priority=19,dependsOnMethods={"Login"})
+
+	@Test(priority=19,dependsOnMethods={"Login"},enabled=false)
 	public static void LeadTab_TC20() throws InterruptedException {
 		CreateReport("LeadTab_TC20");
 		WebElement LeadTabLink = driver.findElement(By.xpath("//a[contains(text(),'Leads')]"));
 		ClickButton(LeadTabLink,"LeadTabLink");
-		
+
 	}
-	
+
 	@Test(priority=20,dependsOnMethods={"LeadTab_TC20"},enabled=false)
 	public static void ViewDropDown_TC21() throws InterruptedException {
 		CreateReport("ViewDropDown_TC21");
 		WebElement ViewDropDown = driver.findElement(By.xpath("//select[@id='fcf']"));
 		ClickButton(ViewDropDown,"ViewDropDown");
 		selectAllDropdownValues(ViewDropDown,"ViewDropDown");
-			
+
 	}
-	
+
 	@Test(priority=21,dependsOnMethods={"LeadTab_TC20"},enabled=false)
 	public static void Functionality_Go_Button_TC22() throws InterruptedException {
 		CreateReport("Functionality_Go_Button_TC22");
-		
+
 		WebElement ViewDropDown = driver.findElement(By.xpath("//select[@id='fcf']"));
 		ClickButton(ViewDropDown,"ViewDropDown");
 		selectElementByVisibleText(ViewDropDown,"Today's Leads","ViewDropDown");
-		
+
 		WebElement UserMenu = driver.findElement(By.id("userNavButton"));
 		ClickButton(UserMenu,"UserMenu");
 		Thread.sleep(3000);
-		
+
 		WebElement LogOutButton = driver.findElement(By.xpath("//a[contains(text(),'Logout')]"));
 		ClickButton(LogOutButton,"LogOutButton");
-		
+
 		Login();
 		LeadTab_TC20();
-		
+
 		WebElement GoButton = driver.findElement(By.xpath("//span[@class='fBody']//input[@name='go']"));
 		ClickButton(GoButton,"GoButton");
 		Thread.sleep(4000);
-	
+
 	}
-	
+
 	@Test(priority=22,dependsOnMethods={"LeadTab_TC20"},enabled=false)
 	public static void TodaysLead_TC23() throws InterruptedException {
 		CreateReport("TodaysLead_TC23");
-		
+
 		WebElement ViewDropDown = driver.findElement(By.xpath("//select[@id='fcf']"));
 		ClickButton(ViewDropDown,"ViewDropDown");
 		selectElementByVisibleText(ViewDropDown,"Today's Leads","ViewDropDown");
-		
+
 		WebElement GoButton = driver.findElement(By.xpath("//span[@class='fBody']//input[@name='go']"));
 		ClickButton(GoButton,"GoButton");
 		Thread.sleep(4000);
 	}
-	
-	
-	@Test(priority=23,dependsOnMethods={"LeadTab_TC20"})
+
+
+	@Test(priority=23,dependsOnMethods={"LeadTab_TC20"},enabled=false)
 	public static void NewButton_TC24() throws InterruptedException {
 		CreateReport("NewButton_TC24");
-		
+
 		WebElement NewButton = driver.findElement(By.xpath("//input[@name='new']"));
 		ClickButton(NewButton,"NewButton");
-		
+
 		WebElement LastName = driver.findElement(By.xpath("//input[@id='name_lastlea2']"));
 		entertext(LastName,"ABCD","LastName"); 
-		
-		
+
+		Thread.sleep(3000);
 		WebElement CompanyName = driver.findElement(By.xpath("//input[@id='lea3']"));
 		entertext(CompanyName,"ABCD","CompanyName");
-		
-		
+
+
 		WebElement SaveButton = driver.findElement(By.xpath("//td[@id='topButtonRow']//input[@name='save']"));
 		ClickButton(SaveButton,"SaveButton");
 		Thread.sleep(2000);
 	}
+
+	@Test(priority=24,dependsOnMethods={"Login"},enabled=false)
+	public static void Contact_TC25() throws InterruptedException {
+		CreateReport("Contact_TC25");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement NewButton = driver.findElement(By.xpath("//input[@name='new']"));
+		ClickButton(NewButton,"NewButton");
+
+		WebElement LastName = driver.findElement(By.xpath("//input[@id='name_lastcon2']"));
+		entertext(LastName,"ABCD","LastName");
+		Thread.sleep(3000);
+
+		WebElement AccountName = driver.findElement(By.xpath("//input[@id='con4']"));
+		entertext(AccountName,"abc","AccountName");
+		Thread.sleep(3000);
+		WebElement SaveButton = driver.findElement(By.xpath("//td[@id='topButtonRow']//input[@name='save']"));
+		ClickButton(SaveButton,"SaveButton");
+
+	}
+
+
+	@Test(priority=25,dependsOnMethods={"Login"},enabled=false)
+	public static void Contact_View_TC26() throws InterruptedException {
+		CreateReport("Contact_View_TC26");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement CreateNewViewLink = driver.findElement(By.xpath("//a[contains(text(),'Create New View')]"));
+		ClickButton(CreateNewViewLink,"CreateNewViewLink");
+
+		WebElement ViewNameField = driver.findElement(By.xpath("//input[@id='fname']"));
+		entertext(ViewNameField,"ABCD","ViewNameField");
+
+		WebElement ViewUniqueNameField = driver.findElement(By.xpath("//input[@id='devname']"));
+
+		clearField(ViewUniqueNameField);
+		Thread.sleep(5000);
+		entertext(ViewUniqueNameField,"ABCD","ViewUniqueNameField");
+		Thread.sleep(3000);
+		WebElement SaveButton = driver.findElement(By.xpath("//div[@class='pbHeader']//input[@name='save']"));
+		ClickButton(SaveButton,"SaveButton");
+
+	}
+	@Test(priority=26,dependsOnMethods={"Login"},enabled=false)
+	public static void RecentCretaed_TC27() throws InterruptedException {
+		CreateReport("RecentCretaed_TC27");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement RecentCretaed = driver.findElement(By.xpath("//select[@id='hotlist_mode']"));
+		ClickButton(RecentCretaed,"RecentCretaed");
+		selectElementByVisibleText(RecentCretaed,"Recently Created","RecentCretaed");
+
+	}
+	@Test(priority=27,dependsOnMethods={"Login"},enabled=false)
+	public static void MyContacts_TC28() throws InterruptedException {
+		CreateReport("MyContacts_TC28");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement ViewDropDown = driver.findElement(By.xpath("//select[@id='fcf']"));
+		ClickButton(ViewDropDown,"ViewDropDown");
+		selectElementByVisibleText(ViewDropDown,"My Contacts","ViewDropDown");
+
+
+	}
+	@Test(priority=28,dependsOnMethods={"Login"},enabled=false)
+	public static void ContactName_TC29() throws InterruptedException {
+		CreateReport("ContactName_TC29");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement ContactName = driver.findElement(By.xpath("//tr[contains(@class,'dataRow even first')]//a[contains(text(),'ABCD')]"));
+		ClickButton(ContactName,"ContactName");
+
+	}
+
+	@Test(priority=29,enabled=false)
+	public static void ViewErrorMsg_TC30() throws InterruptedException {
+		CreateReport("ViewErrorMsg_TC30");
+		Login();
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement CreateNewViewLink = driver.findElement(By.xpath("//a[contains(text(),'Create New View')]"));
+		ClickButton(CreateNewViewLink,"CreateNewViewLink");
+
+		WebElement ViewUniqueNameField = driver.findElement(By.xpath("//input[@id='devname']"));
+		entertext(ViewUniqueNameField,"EFGH","ViewUniqueNameField");
+		Thread.sleep(3000);
+
+		WebElement SaveButton = driver.findElement(By.xpath("//div[@class='pbHeader']//input[@name='save']"));
+		ClickButton(SaveButton,"SaveButton");
+
+	}
+
+
+	@Test(priority=30,dependsOnMethods={"Login"},enabled=false)
+	public static void Contact_View_TC31() throws InterruptedException {
+		CreateReport("Contact_View_TC31");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement CreateNewViewLink = driver.findElement(By.xpath("//a[contains(text(),'Create New View')]"));
+		ClickButton(CreateNewViewLink,"CreateNewViewLink");
+
+		WebElement ViewNameField = driver.findElement(By.xpath("//input[@id='fname']"));
+		entertext(ViewNameField,"ABCD","ViewNameField");
+
+		WebElement ViewUniqueNameField = driver.findElement(By.xpath("//input[@id='devname']"));
+
+		clearField(ViewUniqueNameField);
+		Thread.sleep(5000);
+		entertext(ViewUniqueNameField,"EFGH","ViewUniqueNameField");
+		Thread.sleep(3000);
+		WebElement CancelButton = driver.findElement(By.xpath("//div[@class='pbHeader']//input[@name='cancel']"));
+		ClickButton(CancelButton,"CancelButton");
+
+	}
+
+	@Test(priority=31,dependsOnMethods={"Login"},enabled=false)
+	public static void ContactNew_SaveButton_TC32() throws InterruptedException {
+		CreateReport("Contact_TC25");
+		WebElement ContactTab = driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"));
+		ClickButton(ContactTab,"ContactTab");
+
+		WebElement NewButton = driver.findElement(By.xpath("//input[@name='new']"));
+		ClickButton(NewButton,"NewButton");
+
+		WebElement LastName = driver.findElement(By.xpath("//input[@id='name_lastcon2']"));
+		entertext(LastName,"Indian","LastName");
+		Thread.sleep(3000);
+
+		WebElement AccountName = driver.findElement(By.xpath("//input[@id='con4']"));
+		entertext(AccountName,"GlobalMedia","AccountName");
+		Thread.sleep(3000);
+		WebElement SaveButton = driver.findElement(By.xpath("//td[@id='topButtonRow']//input[@name='save']"));
+		ClickButton(SaveButton,"SaveButton");
+		Thread.sleep(5000);
+	}
+
+	@Test(priority=32,enabled=false)
+	public static void FirstLastName_TC33() throws InterruptedException {
+		CreateReport("FirstLastName_TC33");
+
+		Login();
+		Thread.sleep(3000);
+		WebElement FirstLastName = driver.findElement(By.id("userNavButton"));
+		String expMsg ="Mike Annigeri";
+		validateMessage(FirstLastName,expMsg,"FirstLastName");
+		Thread.sleep(3000);
+
+	}
+
+
+	@Test(priority=33,dependsOnMethods={"UserMenu_TC05"},enabled=false)
+	public static void ValidateLastName_TC34() throws InterruptedException, IOException {
+
+		CreateReport("ValidateLastName_TC34");
+		//launchUrl();
+		WebElement MyProfileLink = driver.findElement(By.xpath("//a[contains(text(),'My Profile')]"));
+		ClickButton(MyProfileLink,"MyProfileLink");
+
+		WebElement EditButton = driver.findElement(By.xpath("//a[@class='contactInfoLaunch editLink']//img"));
+		ClickButton(EditButton,"EditButton");
+
+		driver.switchTo().frame("contactInfoContentId");
+		driver.findElement(By.id("aboutTab")).click();
+		WebElement LastNameField = driver.findElement(By.id("lastName"));
+		clearField(LastNameField);
+		entertext(LastNameField,"ABCD","LastNameField");
+
+		Thread.sleep(2000);
+
+		WebElement SaveAllButton = driver.findElement(By.xpath("//input[@class='zen-btn zen-primaryBtn zen-pas']"));
+		ClickButton(SaveAllButton,"SaveAllButton");
+		Thread.sleep(4000);
+
+		WebElement TopLeftSideNameUpdate = driver.findElement(By.cssSelector("#tailBreadcrumbNode"));
+		String expMsg ="Mike ABCD";
+		validateMessage(TopLeftSideNameUpdate,expMsg,"TopLeftSideNameUpdate");
+
+		Thread.sleep(3000);
+
+		WebElement UpdatedUserMenuName = driver.findElement(By.id("userNavButton"));
+		String expMsg1 ="Mike ABCD";
+		validateMessage(UpdatedUserMenuName,expMsg1,"UpdatedUserMenuName");
+		Thread.sleep(3000);
+
+		WebElement HomeButton = driver.findElement(By.xpath("//a[contains(text(),'Home')]"));
+		ClickButton(HomeButton,"HomeButton");
+		Thread.sleep(4000);
+
+		WebElement UpdatedUserPageName = driver.findElement(By.xpath("//h1[@class='currentStatusUserName']//a[contains(text(),'Mike ABCD')]"));
+		String expMsg2 ="Mike ABCD";
+		validateMessage(UpdatedUserPageName,expMsg2,"UpdatedUserPageName");
+		Thread.sleep(3000);
+
+	}
+
+
+	@Test(priority=34,dependsOnMethods={"Login"},enabled=false)
+	public static void AllTab_TC35() throws InterruptedException, IOException {
+
+		CreateReport("AllTab_TC35");
+		WebElement AllTab = driver.findElement(By.xpath("//li[@id='AllTab_Tab']//a"));
+		ClickButton(AllTab,"AllTab");
+
+		WebElement CustomizeTab = driver.findElement(By.xpath("//input[@name='customize']"));
+		ClickButton(CustomizeTab,"CustomizeTab");
+
+		WebElement SelectTab = driver.findElement(By.xpath("//select[@id='duel_select_1']"));
+		selectElementByVisibleText(SelectTab,"Chatter","SelectTab");
+
+
+		WebElement RemoveButton = driver.findElement(By.xpath("//a[@id='duel_select_0_left']"));
+		ClickButton(RemoveButton,"RemoveButton");
+
+		WebElement SaveButton = driver.findElement(By.xpath("//input[@name='save']"));
+		ClickButton(SaveButton,"SaveButton");
+
+		UserMenu_LogOut_09();
+		Login();
+		Thread.sleep(4000);
+
+	}
 	
+	@Test(priority=35,dependsOnMethods={"Login"},enabled=false)
+	public static void Calendar_TC36() throws InterruptedException, IOException {
+		CreateReport("Calendar_TC36");
+		
+		WebElement HomeButton = driver.findElement(By.xpath("//a[contains(text(),'Home')]"));
+		ClickButton(HomeButton,"HomeButton");
+		
+		WebElement CurrentDate = driver.findElement(By.xpath("//a[contains(text(),'Sunday July 21, 2019')]"));
+		ClickButton(CurrentDate,"CurrentDate");
+		
+		WebElement TimeLink = driver.findElement(By.xpath("//a[contains(text(),'8:00 AM')]"));
+		ClickButton(TimeLink,"TimeLink");
+		
+		WebElement ComboLink = driver.findElement(By.xpath("//body[contains(@class,'ext-webkit ext-chrome sfdcBody brandQuaternaryBgr')]/div[@id='contentWrapper']/div[contains(@class,'bodyDiv brdPalette brandPrimaryBrd')]/table[@id='bodyTable']/tbody/tr/td[@id='bodyCell']/form[@id='editPage']/div[@id='ep']/div[contains(@class,'pbBody')]/div[contains(@class,'pbSubsection')]/table[contains(@class,'detailList')]/tbody/tr/td[contains(@class,'dataCol col02')]/div[contains(@class,'requiredInput')]/a[1]"));
+		ClickButton(ComboLink,"ComboLink");
+		
+		WebElement otherLink = driver.findElement(By.xpath("//a[contains(text(),'Other')]"));
+		ClickButton(otherLink,"otherLink");
+		
+		WebElement EndTime = driver.findElement(By.xpath("//a[contains(text(),'8:00 AM')]"));
+		selectElementByVisibleText(EndTime,"9:00 PM","EndTime");
+		
+		
+		Thread.sleep(3000);
+		
+		WebElement SaveButton = driver.findElement(By.xpath("//a[contains(text(),'Other')]"));
+		ClickButton(SaveButton,"SaveButton");
+		Thread.sleep(4000);
+	}
+	
+	
+	@Test(priority=36,dependsOnMethods={"Login"},enabled=false)
+	public static void CalendarRecurrance_TC37() throws InterruptedException, IOException {
+		CreateReport("CalendarRecurrance_TC37");
+		WebElement HomeButton = driver.findElement(By.xpath("//a[contains(text(),'Home')]"));
+		ClickButton(HomeButton,"HomeButton");
+		
+		WebElement CurrentDate = driver.findElement(By.xpath("//a[contains(text(),'Sunday July 21, 2019')]"));
+		ClickButton(CurrentDate,"CurrentDate");
+		
+		WebElement TimeLink = driver.findElement(By.xpath("//a[contains(text(),'7:00 AM')]"));
+		ClickButton(TimeLink,"TimeLink");
+		
+		WebElement ComboLink = driver.findElement(By.xpath("//body[contains(@class,'ext-webkit ext-chrome sfdcBody brandQuaternaryBgr')]/div[@id='contentWrapper']/div[contains(@class,'bodyDiv brdPalette brandPrimaryBrd')]/table[@id='bodyTable']/tbody/tr/td[@id='bodyCell']/form[@id='editPage']/div[@id='ep']/div[contains(@class,'pbBody')]/div[contains(@class,'pbSubsection')]/table[contains(@class,'detailList')]/tbody/tr/td[contains(@class,'dataCol col02')]/div[contains(@class,'requiredInput')]/a[1]"));
+		ClickButton(ComboLink,"ComboLink");
+		
+		switchToNewWindow();
+		WebElement otherLink = driver.findElement(By.xpath("//a[contains(text(),'Other')]"));
+		ClickButton(otherLink,"otherLink");
+		
+		WebElement EndTime = driver.findElement(By.xpath("//input[@id='EndDateTime_time']"));
+		selectElementByVisibleText(EndTime,"7:00 PM","EndTime");
+		
+		WebElement Recurrence = driver.findElement(By.xpath("//input[@id='IsRecurrence']"));
+		checkbox_Checking(Recurrence);
+		
+		WebElement WeeklyRadioButton = driver.findElement(By.xpath("//input[@id='rectypeftw']"));
+		RadioButton(WeeklyRadioButton,"WeeklyRadioButton");
+		
+		
+		WebElement RecurrenceEndTime = driver.findElement(By.xpath("//input[@id='RecurrenceEndDateOnly']"));
+		selectElementByVisibleText(RecurrenceEndTime,"27","RecurrenceEndTime");
+		
+		WebElement SaveButton = driver.findElement(By.xpath("//td[@id='topButtonRow']//input[@name='save']"));
+		ClickButton(SaveButton,"SaveButton");
+		
+		
+		WebElement MonthView = driver.findElement(By.xpath("//img[@class='monthViewIcon']"));
+		ClickButton(MonthView,"MonthView");
+		
+	}
+
+
 	
 }
