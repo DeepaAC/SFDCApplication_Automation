@@ -57,7 +57,7 @@ public class SFDC_Steps  extends  ReusableMethods {
 	public void click_on_the_login_button() throws Throwable {
 		WebElement LoginButton = driver.findElement(By.xpath("//input[@id='Login']"));
 		ClickButton(LoginButton,"LoginButton");
-		//validateMessage(LoginButton,"Please enter your password.","error message");
+		
 
 	}
 
